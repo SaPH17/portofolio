@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap')
+
+.bannerContainer
+    display: flex
+    padding-left: 10%
+    align-items: flex-start
+    justify-content: center
+    flex-direction: column
+    min-height: 100vh
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/dummy.png")
+    background-repeat: no-repeat
+    background-size: cover
+
+    .subtitle
+        color: darkgray
+        font-size: 1.25rem
+        padding-left: 0.3rem
+        font-weight: bold
+
+    .title
+        font-family: 'Inconsolata', monospace
+        position: relative
+        color: white
+        font-size: 4.5rem
+        padding-left: 0.1rem
+        clip-path: inset(0% calc(100% - 0.1rem) 0% 0%)
+        width: max-content
+        animation: typewriter 3s steps(16) 1s forwards
+
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            left: 0
+            bottom: 0
+            width: 0.1em
+            background: white
+            animation: cursor-blink 3s steps(16) 1s forwards, blink 0.5s infinite
+
+@keyframes typewriter
+    to
+        clip-path: inset(0% 0% 0% 0%)
+
+@keyframes cursor-blink
+    to
+        left: calc(100% - 0.1rem)
+
+@keyframes blink
+    to
+        background: transparent
