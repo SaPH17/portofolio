@@ -10,6 +10,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/dummy.png")
     background-repeat: no-repeat
     background-size: cover
+    background-position: center center
 
     .subtitle
         color: darkgray
@@ -49,3 +50,28 @@
 @keyframes blink
     to
         background: transparent
+
+@media screen and ( max-width: 768px )
+    .bannerContainer
+        .subtitle
+            font-size: 1rem
+        .title
+            font-size: 3rem
+
+@media screen and ( max-width: 480px )
+    .bannerContainer
+        padding-left: 5%
+
+        .subtitle
+            font-size: 0.8rem
+        .title
+            font-size: 2.25rem
+
+@media screen and ( max-width: 320px )
+    .bannerContainer
+        padding-left: 5%
+
+        .subtitle
+            font-size: 0.6rem
+        .title
+            font-size: 1.75rem

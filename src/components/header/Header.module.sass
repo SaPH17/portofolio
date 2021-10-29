@@ -14,7 +14,7 @@
 .logoContainer
     font-family: 'Kaushan Script', cursive
     color: $logo-color
-    font-size: 2.25rem
+    font-size: 2.5rem
     // position: relative
 
     // a
@@ -69,3 +69,28 @@ nav
                 transform: scaleX(0)
                 transform-origin: right
                 transition: transform 200ms ease-in
+
+.navMenuContainerResponsive
+    display: none
+    position: relative
+
+@media screen and ( max-width: 768px )
+    .logoContainer
+        font-size: 2rem
+
+    nav ul li a
+        font-size: 0.6rem
+
+@media screen and ( max-width: 640px )
+    .headerContainer
+        padding: 0.5em 1.5em
+
+    .logoContainer
+        font-size: 1.75rem
+
+@media screen and ( max-width: 480px )
+    .navMenuContainer
+        display: none
+
+    .navMenuContainerResponsive
+        display: flex
