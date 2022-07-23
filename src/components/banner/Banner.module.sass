@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap')
 
+@mixin typewriter-animation($wordCount, $delay)
+    animation: typewriter 3s steps($wordCount) $delay forwards
+
+@mixin typewriter-writer-animation($wordCount, $delay, $writerDelay: 0s, $shouldDisappear: false)
+    @if $shouldDisappear
+        animation: cursor-blink 3s steps($wordCount) $delay forwards, blink 0.5s infinite, typewriter-disappear 100ms forwards calc( 3s + #{$delay} )
+    @else
+        animation: cursor-blink 3s steps($wordCount) $delay forwards, blink 0.5s infinite $writerDelay
+
 .bannerContainer
     display: flex
-    padding-left: 10%
+    padding-left: 8%
     align-items: flex-start
     justify-content: center
     flex-direction: column
     min-height: 100vh
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/dummy.png")
+    background-image: linear-gradient(rgba(0, 0, 0, 0.727), rgba(0, 0, 0, 0.7)), url("/dummy.jpg")
     background-repeat: no-repeat
     background-size: cover
-    background-position: center center
+    background-position-x: center
 
     .subtitle
         color: darkgray
@@ -22,8 +31,17 @@
         font-family: 'Inconsolata', monospace
         position: relative
         color: white
-        font-size: 4.5rem
+        font-size: 4.75rem
         padding-left: 0.1rem
+
+    .titleResponsiveContainer
+        display: none
+        font-size: 3.5rem
+        color: white
+        font-family: 'Inconsolata', monospace
+        flex-direction: column
+
+    .typewriterAnimation
         clip-path: inset(0% calc(100% - 0.1rem) 0% 0%)
         width: max-content
         animation: typewriter 3s steps(16) 1s forwards
@@ -36,27 +54,18 @@
             left: 0
             bottom: 0
             width: 0.1em
-            background: white
-            animation: cursor-blink 3s steps(16) 1s forwards, blink 0.5s infinite
-
-@keyframes typewriter
-    to
-        clip-path: inset(0% 0% 0% 0%)
-
-@keyframes cursor-blink
-    to
-        left: calc(100% - 0.1rem)
-
-@keyframes blink
-    to
-        background: transparent
+            background: transparent
+            @include typewriter-writer-animation($wordCount: 16, $delay: 1s, $shouldDisappear: false)
 
 @media screen and ( max-width: 768px )
     .bannerContainer
+        padding-left: 5%
+
         .subtitle
             font-size: 1rem
+
         .title
-            font-size: 3rem
+            font-size: 3.5rem
 
 @media screen and ( max-width: 480px )
     .bannerContainer
@@ -64,14 +73,62 @@
 
         .subtitle
             font-size: 0.8rem
+
         .title
-            font-size: 2.25rem
+            display: none
+
+        .titleResponsiveContainer
+            display: flex
+
+            .titleResponsive
+                width: max-content
+                clip-path: inset(0% calc(100% - 0.1rem) 0% 0%)
+                padding-left: 0.1rem
+                position: relative
+
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    right: 0
+                    left: 0
+                    bottom: 0
+                    width: 0.1em
+                    background: transparent
+
+            .titleResponsiveTop
+                @include typewriter-animation($wordCount: 9, $delay: 1s)
+
+                &::before
+                    @include typewriter-writer-animation($wordCount: 9, $delay: 1s, $shouldDisappear: true)
+
+            .titleResponsiveBot
+                @include typewriter-animation($wordCount: 6, $delay: 4s)
+
+                &::before
+                    @include typewriter-writer-animation($wordCount: 6, $delay: 4s, $writerDelay: 4s,  $shouldDisappear: false)
 
 @media screen and ( max-width: 320px )
     .bannerContainer
         padding-left: 5%
 
         .subtitle
-            font-size: 0.6rem
-        .title
-            font-size: 1.75rem
+            font-size: 0.7rem
+        .titleResponsive
+            font-size: 3rem
+
+@keyframes typewriter
+    to
+        clip-path: inset(0% 0% 0% 0%)
+
+@keyframes typewriter-disappear
+    to
+        background: transparent
+
+@keyframes cursor-blink
+    to
+        left: calc(100% - 0.1rem)
+
+@keyframes blink
+    to
+        background: white
