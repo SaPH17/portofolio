@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./Banner.module.sass"
 
-const Banner = () => {
+const Banner = ({ contacts }) => {
 	return (
 		<div className={styles.bannerContainer}>
 			<div className={styles.subtitle}>Hi, my name is</div>
@@ -10,16 +10,23 @@ const Banner = () => {
 			</div>
 			<div className={styles.titleResponsiveContainer}>
 				<div
-					className={`${styles.titleResponsive} ${styles.titleResponsiveTop}`}
-				>
+					className={`${styles.titleResponsive} ${styles.titleResponsiveTop}`}>
 					Stephanus
 				</div>
 				<div
-					className={`${styles.titleResponsive} ${styles.titleResponsiveBot}`}
-				>
+					className={`${styles.titleResponsive} ${styles.titleResponsiveBot}`}>
 					Aditya
 				</div>
 			</div>
+			<ul className={styles.contactContainer}>
+				{contacts.map((val, idx) => {
+					return (
+						<li key={idx}>
+							<a href={val.url}>{val.icon}</a>
+						</li>
+					)
+				})}
+			</ul>
 		</div>
 	)
 }

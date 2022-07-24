@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap')
-@import '../..//variables'
+@import '../../variables'
+
+$mobilePadding: 0.5em 1.5em
 
 .headerContainer
     padding: 1em 2.5em
@@ -7,6 +9,7 @@
     align-self: center
     justify-content: space-between
     position: fixed
+    z-index: 20
     top: 0
     left: 0
     right: 0
@@ -15,30 +18,12 @@
     font-family: 'Kaushan Script', cursive
     color: $logo-color
     font-size: 2.5rem
-    // position: relative
-
-    // a
-    //     z-index: 1
-    //     position: relative
-
-    //     &:hover+ svg
-    //         z-index: -1
-    //         transform: scale(1)
-
-    // svg
-    //     position: absolute
-    //     top: -60%
-    //     left: 0
-    //     z-index: -1
-    //     transform: scale(0)
-    //     transform-origin: center
-    //     transition: transform 200ms ease-in
 
 nav
     display: flex
     align-items: center
 
-    ul
+    .linkContainer
         list-style: none
         display: flex
 
@@ -48,7 +33,7 @@ nav
         li a
             color: $menu-color
             transition-duration: 300ms
-            font-size: 0.8rem
+            font-size: 0.9rem
             text-transform: uppercase
             font-weight: bold
             position: relative
@@ -70,9 +55,8 @@ nav
                 transform-origin: right
                 transition: transform 200ms ease-in
 
-.navMenuContainerResponsive
+.navMenuContainerResponsive, .navMenuPopupContainer
     display: none
-    position: relative
 
 @media screen and ( max-width: 768px )
     .logoContainer
@@ -83,7 +67,7 @@ nav
 
 @media screen and ( max-width: 640px )
     .headerContainer
-        padding: 0.5em 1.5em
+        padding: $mobilePadding
 
     .logoContainer
         font-size: 1.75rem
@@ -92,5 +76,5 @@ nav
     .navMenuContainer
         display: none
 
-    .navMenuContainerResponsive
+    .navMenuContainerResponsive, .navMenuPopupContainer
         display: flex
