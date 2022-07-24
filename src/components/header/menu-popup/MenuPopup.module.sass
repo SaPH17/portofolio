@@ -13,7 +13,7 @@
     bottom: 0
 
     .linkContainer
-        position: absolute
+        position: relative
         z-index: 10
         list-style: none
         display: flex
@@ -59,7 +59,7 @@
         top: 0
         right: 0
         transform: translateX(100%)
-        transition: transform .45s cubic-bezier(.694,.048,.335,1),-webkit-transform .45s cubic-bezier(.694,.048,.335,1)
+        transition: transform .45s ease-in-out,-webkit-transform .45s ease-in-out
 
     &::before
         z-index: 5
