@@ -4,7 +4,7 @@ import Hamburger from "hamburger-react"
 import { useState } from "react"
 import MenuPopup from "./menu-popup/MenuPopup"
 
-const Header = ({ contacts }) => {
+const Header = ({ contacts, isIntersecting }) => {
 	const menus = [
 		{ text: "About Me", url: "" },
 		{ text: "Projects", url: "" },
@@ -16,7 +16,10 @@ const Header = ({ contacts }) => {
 
 	return (
 		<>
-			<header className={styles.headerContainer}>
+			<header
+				className={`${styles.headerContainer} ${
+					isIntersecting ? "" : styles.headerScrolled
+				}`}>
 				<div className={styles.logoContainer}>
 					<a href='/'>stepadity</a>
 				</div>

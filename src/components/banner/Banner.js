@@ -1,9 +1,9 @@
 import React from "react"
 import styles from "./Banner.module.sass"
 
-const Banner = ({ contacts }) => {
+const Banner = React.forwardRef(({ contacts }, ref) => {
 	return (
-		<div className={styles.bannerContainer}>
+		<div className={styles.bannerContainer} ref={ref}>
 			<div className={styles.subtitle}>Hi, my name is</div>
 			<div className={`${styles.title} ${styles.typewriterAnimation}`}>
 				Stephanus Aditya
@@ -29,6 +29,6 @@ const Banner = ({ contacts }) => {
 			</ul>
 		</div>
 	)
-}
+})
 
 export default Banner

@@ -1,7 +1,9 @@
 import Banner from "./components/banner/Banner"
 import Header from "./components/header/Header"
+import Projects from "./components/projects/Projects"
 import "./App.css"
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa"
+import useIntersectionObserver from "./hooks/useIntersectionObserver"
 
 function App() {
 	const contacts = [
@@ -17,10 +19,17 @@ function App() {
 		{ icon: <FaEnvelope />, url: "mailto:stephanusaditya17@gmail.com" },
 	]
 
+	const options = {
+		rootMargin: "-200px 0px 0px 0px",
+	}
+
+	const [containerRef, isIntersecting] = useIntersectionObserver(options)
+	console.log(isIntersecting)
 	return (
 		<>
-			<Header contacts={contacts} />
-			<Banner contacts={contacts} />
+			<Header contacts={contacts} isIntersecting={isIntersecting} />
+			<Banner contacts={contacts} ref={containerRef} />
+			<Projects />
 		</>
 	)
 }
