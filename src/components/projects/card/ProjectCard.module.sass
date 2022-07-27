@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
+@import '../../../variables'
+
+$offsetValue: -15%
+$numberTopOffsetValue: -25%
+$numberHorizontalOffsetValue: -10%
+
+.cardContainer
+    position: relative
+    width: 100%
+    height: 480px
+    box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.35)
+    cursor: pointer
+
+    &:hover
+        box-shadow: 4px 8px 48px rgba(0, 0, 0, 0.45)
+
+        .cardImage::before
+            opacity: 1
+
+    .cardImage
+        position: relative
+        width: 100%
+        height: 100%
+        background-size: cover
+        padding: 2em
+
+        &::before
+            content: ""
+            opacity: 0
+            transition-duration: 250ms
+            height: 100%
+            width: 100%
+            position: absolute
+            z-index: 2
+            top: 0
+            left: 0
+            background-color: rgba(0, 0, 0, 0.5)
+
+.cardContent
+    display: flex
+    height: 100%
+    flex-direction: column
+    justify-content: flex-end
+    position: relative
+    z-index: 10
+    gap: 1em
+
+    .cardNumber
+        top: $numberTopOffsetValue
+        font-size: 10rem
+        font-weight: bold
+        color: $menu-underline
+        position: absolute
+        font-family: 'Poppins', sans-serif
+
+    .cardTitle
+        color: $logo-color
+        font-weight: bold
+        font-size: 2.5rem
+
+    .cardDescription
+        color: white
+        font-size: 1.75rem
+
+    .cardButton
+        background-color: $menu-underline
+        color: white
+        font-size: 1.15rem
+        transition-duration: 250ms
+        font-weight: bold
+        padding: 0.6em 1.2em
+        margin-top: 1.25em
+
+        &:hover
+            transform: translateY(-10%)
+            background-color: #b62d2d
+
+.cardOdd
+    left: $offsetValue
+
+    .cardContent
+        align-items: flex-end
+
+        .cardNumber
+            left: $numberHorizontalOffsetValue
+
+.cardEven
+    right: $offsetValue
+
+    .cardContent
+        align-items: flex-start
+
+        .cardNumber
+            right: $numberHorizontalOffsetValue

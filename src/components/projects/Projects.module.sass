@@ -1,2 +1,29 @@
-.container
-    height: 150vh
+@import "../../variables"
+
+.sectionContainer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 5em 25%
+
+.projectContainer
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 5em 3em
+    flex-direction: column
+    border: 1px #d1d1d1 solid
+    position: relative
+    gap: 5em
+
+    .title
+        top: -0.75em
+        left: auto
+        right: auto
+        position: absolute
+        padding: 0 1em
+        width: max-content
+        color: $title-color
+        font-size: 2.25rem
+        font-weight: bold
+        background-color: white

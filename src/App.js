@@ -24,7 +24,7 @@ function App() {
 	}
 
 	const [containerRef, isIntersecting] = useIntersectionObserver(options)
-	console.log(isIntersecting)
+
 	return (
 		<>
 			<Header contacts={contacts} isIntersecting={isIntersecting} />
