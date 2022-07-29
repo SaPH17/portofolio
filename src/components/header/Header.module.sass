@@ -64,12 +64,16 @@ nav
 .navMenuContainerResponsive, .navMenuPopupContainer
     display: none
 
+@media screen and ( max-width: 1280px )
+    .headerContainer
+        padding: 1em 2.5em 1em 2.5em
+
 @media screen and ( max-width: 768px )
     .logoContainer
         font-size: 2rem
 
-    nav ul li a
-        font-size: 0.6rem
+    nav .linkContainer li a
+        font-size: 0.8rem
 
 @media screen and ( max-width: 640px )
     .headerContainer
@@ -77,6 +81,9 @@ nav
 
     .logoContainer
         font-size: 1.75rem
+
+    nav .linkContainer li a
+        font-size: 0.65rem
 
 @media screen and ( max-width: 480px )
     .navMenuContainer

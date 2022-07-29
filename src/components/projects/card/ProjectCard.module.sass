@@ -2,20 +2,29 @@
 @import '../../../variables'
 
 $offsetValue: -15%
-$numberTopOffsetValue: -25%
+$numberTopOffsetValue: -30%
 $numberHorizontalOffsetValue: -10%
 
 .cardContainer
+    --offset-value: -15%
+    --number-top-offset-value: -30%
+    --number-horizontal-offset-value: -10%
+
     position: relative
-    width: 100%
+    width: 850px
     height: 480px
-    box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.35)
+    box-shadow: 4px 16px 64px rgba(0, 0, 0, 0.45)
     cursor: pointer
+    transition: box-shadow 300ms
 
     &:hover
-        box-shadow: 4px 8px 48px rgba(0, 0, 0, 0.45)
+        box-shadow: 4px 16px 96px rgba(0, 0, 0, 0.45)
 
         .cardImage::before
+            opacity: 1
+
+        .cardNumber
+            transform: translateY(0)
             opacity: 1
 
     .cardImage
@@ -23,6 +32,7 @@ $numberHorizontalOffsetValue: -10%
         width: 100%
         height: 100%
         background-size: cover
+        background-position: center
         padding: 2em
 
         &::before
@@ -43,11 +53,15 @@ $numberHorizontalOffsetValue: -10%
     flex-direction: column
     justify-content: flex-end
     position: relative
-    z-index: 10
+    z-index: 3
     gap: 1em
 
     .cardNumber
-        top: $numberTopOffsetValue
+        text-shadow: 4px 16px 64px rgba(199, 81, 81, 0.45)
+        transition-duration: 500ms
+        transform: translateY(15%)
+        opacity: 0
+        top: var(--number-top-offset-value)
         font-size: 10rem
         font-weight: bold
         color: $menu-underline
@@ -70,26 +84,124 @@ $numberHorizontalOffsetValue: -10%
         transition-duration: 250ms
         font-weight: bold
         padding: 0.6em 1.2em
-        margin-top: 1.25em
+        margin-top: 0.5em
 
         &:hover
             transform: translateY(-10%)
             background-color: #b62d2d
 
 .cardOdd
-    left: $offsetValue
+    left: var(--offset-value)
 
     .cardContent
         align-items: flex-end
 
         .cardNumber
-            left: $numberHorizontalOffsetValue
+            left: var(--number-horizontal-offset-value)
 
 .cardEven
-    right: $offsetValue
+    right: var(--offset-value)
 
     .cardContent
         align-items: flex-start
 
         .cardNumber
-            right: $numberHorizontalOffsetValue
+            right: var(--number-horizontal-offset-value)
+
+@media screen and ( max-width: 1280px )
+    .cardContainer
+        width: 700px
+        height: 393px
+
+    .cardContent
+        gap: 0.8em
+
+        .cardNumber
+            font-size: 8rem
+
+        .cardTitle
+            font-size: 2rem
+
+        .cardDescription
+            font-size: 1.25rem
+
+        .cardButton
+            font-size: 1rem
+
+@media screen and ( max-width: 1024px )
+    .cardContainer
+        --offset-value: 0
+
+@media screen and ( max-width: 768px )
+    .cardContainer
+        width: 550px
+        height: 309px
+
+        .cardImage
+            padding: 1em
+
+        .cardContent
+            gap: 0.7em
+
+            .cardNumber
+                font-size: 6rem
+
+            .cardTitle
+                font-size: 1.75rem
+
+            .cardDescription
+                font-size: 1rem
+
+            .cardButton
+                font-size: 1rem
+
+@media screen and ( max-width: 640px )
+    .cardContainer
+        width: 450px
+        height: 253px
+        --number-horizontal-offset-value: -7.5%
+        box-shadow: 2px 8px 48px rgba(0, 0, 0, 0.45)
+
+        &:hover
+            box-shadow: 2px 8px 56px rgba(0, 0, 0, 0.45)
+
+        .cardContent
+            gap: 0.5em
+
+            .cardNumber
+                font-size: 6rem
+
+            .cardTitle
+                font-size: 1.25rem
+
+            .cardDescription
+                font-size: 0.75rem
+
+            .cardButton
+                font-size: 0.75rem
+                font-weight: normal
+
+@media screen and ( max-width: 480px )
+    .cardContainer
+        width: 320px
+        height: 182px
+
+        .cardContent
+            gap: 0.5em
+
+            .cardNumber
+                display: none
+
+            .cardTitle
+                font-size: 1.25rem
+
+            .cardDescription
+                font-size: 0.75rem
+
+            .cardButton
+                font-size: 0.75rem
+
+@media screen and ( max-width: 320px )
+    .cardContainer
+        width: 250px
+        height: 182px

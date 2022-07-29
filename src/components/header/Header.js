@@ -7,7 +7,7 @@ import MenuPopup from "./menu-popup/MenuPopup"
 const Header = ({ contacts, isIntersecting }) => {
 	const menus = [
 		{ text: "About Me", url: "" },
-		{ text: "Projects", url: "" },
+		{ text: "Projects", url: "#projects" },
 		{ text: "Achievements", url: "" },
 		{ text: "Contacts", url: "" },
 	]
@@ -36,7 +36,7 @@ const Header = ({ contacts, isIntersecting }) => {
 				</nav>
 				<nav className={styles.navMenuContainerResponsive}>
 					<Hamburger
-						color='white'
+						color={isIntersecting ? "white" : "#204374"}
 						size='20'
 						rounded
 						hideOutline={true}
@@ -47,6 +47,7 @@ const Header = ({ contacts, isIntersecting }) => {
 			</header>
 			<div className={styles.navMenuPopupContainer}>
 				<MenuPopup
+					isIntersecting={isIntersecting}
 					menus={menus}
 					isMenuOpened={menuOpened}
 					contacts={contacts}></MenuPopup>

@@ -1,11 +1,13 @@
 import React from "react"
 import styles from "./MenuPopup.module.sass"
 
-const MenuPopup = ({ menus, isMenuOpened, contacts }) => {
+const MenuPopup = ({ isIntersecting, menus, isMenuOpened, contacts }) => {
 	return (
 		<nav
 			className={`${styles.menuContainer} ${
 				isMenuOpened ? styles.menuContainerOpen : ""
+			} ${
+				isIntersecting ? "" : styles.menuContainerScrolled 
 			}`}>
 			<ul className={styles.linkContainer}>
 				{menus.map((val, idx) => {

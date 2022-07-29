@@ -11,6 +11,7 @@
     right: 0
     left: 0
     bottom: 0
+    pointer-events: none
 
     .linkContainer
         position: relative
@@ -22,6 +23,7 @@
         flex-direction: column
         align-items: flex-start
         gap: 2em
+        pointer-events: all
 
         * + *
             margin-left: 0em
@@ -70,6 +72,19 @@
         z-index: 8
         background: linear-gradient(90deg, rgba(12,14,4,1) 0%, rgba(21,22,13,1) 36%, rgba(26,27,18,1) 62%, rgba(30,31,23,1) 79%, rgba(42,43,35,1) 100%)
         transition-delay: 200ms
+
+.menuContainerScrolled
+    &::before
+        background-color: $logo-color-scrolled
+
+    &::after
+        background: white
+
+    .linkContainer li a
+        color: black
+
+    .contactContainer li a:hover
+        color: $logo-color-scrolled
 
 .contactContainer
     display: flex

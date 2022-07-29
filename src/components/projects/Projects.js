@@ -31,7 +31,7 @@ const Projects = () => {
 		},
 	]
 
-	return <div className={styles.sectionContainer}>
+	return <div className={styles.sectionContainer} id="projects">
 		<div className={styles.projectContainer}>
 			<div className={styles.title}>
 				Projects
