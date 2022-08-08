@@ -7,7 +7,7 @@ import MenuPopup from "./menu-popup/MenuPopup"
 const Header = ({ contacts, isIntersecting }) => {
 	const menus = [
 		{ text: "About Me", url: "" },
-		{ text: "Projects", url: "#projects" },
+		{ text: "Projects", url: "/#projects" },
 		{ text: "Achievements", url: "" },
 		{ text: "Contacts", url: "" },
 	]

@@ -41,6 +41,9 @@ const Projects = () => {
 					<ProjectCard key={idx} project={val} idx={idx} />
 				)
 			})}
+			<a href="/" className={styles.seeMoreBtn}>
+				View More
+			</a>
 		</div>
 	</div>
 }
