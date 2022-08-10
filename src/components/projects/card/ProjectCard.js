@@ -17,8 +17,14 @@ const ProjectCard = ({ project, idx }) => {
                     <div className={styles.cardDescription}>
                         {project.description}
                     </div>
-                    <div className={styles.cardButton}>
-                        View Project
+                    <div className={styles.cardButtonContainer}>
+                        {project.links.map((val, idx) => {
+                            return (
+                                <a href={val.url} className={styles.cardButton}>
+                                    {val.icon}
+                                </a>
+                            )
+                        })}
                     </div>
                 </div>
             </div>

@@ -1,33 +1,84 @@
 import React from "react"
 import ProjectCard from './card/ProjectCard'
 import styles from "./Projects.module.sass"
+import { FaGithub, FaLink } from "react-icons/fa"
 
 const Projects = () => {
 	const projects = [
 		{
-			title: "Project Title",
-			description: "This is project description",
-			image: 'dummy-old.png'
+			title: "netPHlix",
+			description: "Netflix clone made using HTML, CSS, JS and PHP for NAR case",
+			image: 'dummy-old.png',
+			links: [
+				{
+					url: "https://github.com/SaPH17/netphlix",
+					icon: <FaGithub />
+				},
+				{
+					url: "https://www.netphlix.stepadity.com/",
+					icon: <FaLink />
+				}
+			]
 		},
 		{
 			title: "Project Title",
 			description: "This is project description",
-			image: 'dummy-old.png'
+			image: 'dummy-old.png',
+			links: [
+				{
+					url: "https://github.com/",
+					icon: <FaGithub />
+				},
+				{
+					url: "https://www.youtube.com/",
+					icon: <FaLink />
+				}
+			]
 		},
 		{
 			title: "Project Title",
 			description: "This is project description",
-			image: 'dummy-old.png'
+			image: 'dummy-old.png',
+			links: [
+				{
+					url: "https://github.com/",
+					icon: <FaGithub />
+				},
+				{
+					url: "https://www.youtube.com/",
+					icon: <FaLink />
+				}
+			]
 		},
 		{
 			title: "Project Title",
 			description: "This is project description",
-			image: 'dummy-old.png'
+			image: 'dummy-old.png',
+			links: [
+				{
+					url: "https://github.com/",
+					icon: <FaGithub />
+				},
+				{
+					url: "https://www.youtube.com/",
+					icon: <FaLink />
+				}
+			]
 		},
 		{
 			title: "Project Title",
 			description: "This is project description",
-			image: 'dummy-old.png'
+			image: 'dummy-old.png',
+			links: [
+				{
+					url: "https://github.com/",
+					icon: <FaGithub />
+				},
+				{
+					url: "https://www.youtube.com/",
+					icon: <FaLink />
+				}
+			]
 		},
 	]
 

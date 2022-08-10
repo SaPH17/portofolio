@@ -1,0 +1,32 @@
+@import "../../variables"
+
+.sectionContainer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 0em 15% 5em
+    background-color: #f1f1f1
+    scroll-margin: 90px
+
+.projectContainer
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 5em 3em
+    flex-direction: column
+    position: relative
+    gap: 5em
+    background-color: inherit
+
+    .title
+        padding: 0 1em
+        color: $title-color
+        font-size: 2.25rem
+        font-weight: bold
+        background-color: inherit
+
+.cardContainer
+    display: grid
+    width: 100%
+    gap: 3em
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr))

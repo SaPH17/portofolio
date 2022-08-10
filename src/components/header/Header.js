@@ -8,7 +8,7 @@ const Header = ({ contacts, isIntersecting }) => {
 	const menus = [
 		{ text: "About Me", url: "" },
 		{ text: "Projects", url: "/#projects" },
-		{ text: "Achievements", url: "" },
+		{ text: "Achievements", url: "/#achievements" },
 		{ text: "Contacts", url: "" },
 	]
 
