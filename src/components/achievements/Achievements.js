@@ -4,14 +4,24 @@ import styles from './Achievements.module.sass'
 
 const Achievements = () => {
     let achievements = [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        {
+            image: "dummy-old.png",
+        },
+        {
+            image: "dummy-old.png",
+        },
+        {
+            image: "dummy-old.png",
+        },
+        {
+            image: "dummy-old.png",
+        },
+        {
+            image: "dummy-old.png",
+        },
+        {
+            image: "dummy-old.png",
+        },
     ]
     return (
         <div className={styles.sectionContainer} id="achievements">
@@ -22,7 +32,7 @@ const Achievements = () => {
                 <div className={styles.cardContainer}>
                     {achievements.map((val, idx) => {
                         return (
-                            <AchievementCard />
+                            <AchievementCard achievement={val} />
                         )
                     })}
                 </div>

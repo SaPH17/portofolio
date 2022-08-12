@@ -12,7 +12,7 @@ const MenuPopup = ({ isIntersecting, menus, isMenuOpened, contacts }) => {
 			<ul className={styles.linkContainer}>
 				{menus.map((val, idx) => {
 					return (
-						<li key={idx} className={styles.menuPopupItem}>
+						<li key={idx} className={styles.menuPopupItem} style={{pointerEvents: `${isMenuOpened ? 'auto' : 'none'}`}}>
 							<a href={val.url}>{val.text}</a>
 						</li>
 					)
@@ -22,7 +22,7 @@ const MenuPopup = ({ isIntersecting, menus, isMenuOpened, contacts }) => {
 			<ul className={styles.contactContainer}>
 				{contacts.map((val, idx) => {
 					return (
-						<li key={idx} className={styles.menuPopupItem}>
+						<li key={idx} className={styles.menuPopupItem} style={{pointerEvents: `${isMenuOpened ? 'auto' : 'none'}`}}>
 							<a href={val.url}>{val.icon}</a>
 						</li>
 					)

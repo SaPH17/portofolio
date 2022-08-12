@@ -33,7 +33,7 @@ $numberHorizontalOffsetValue: -10%
         width: 100%
         height: 100%
         background-size: cover
-        background-position: center
+        background-repeat: no-repeat
         padding: 1em 2em
 
         &::before
@@ -81,16 +81,36 @@ $numberHorizontalOffsetValue: -10%
 
     .cardButtonContainer
         display: flex
-        gap: 1em
+        gap: 1.5em
 
         .cardButton
             font-size: 2.25rem
             color: $logo-color
-            transition-duration: 250ms
+            transition: transform ease-in 150ms
+            position: relative
 
             &:hover
                 color: $logo-color-hovered
                 transform: scale(1.1)
+
+                &::after
+                    transform: scale(1)
+                    top: 100%
+
+            &::after
+                content: attr(data-tooltip)
+                display: block
+                position: absolute
+                background-color: rgba(black, .7)
+                padding: 1em 2em
+                color: white
+                border-radius: 5px
+                font-size: 0.8rem
+                top: 0
+                left: -125%
+                white-space: nowrap
+                transform: scale(0)
+                transition: transform ease-out 150ms, top ease-out 150ms
 
 .cardOdd
     left: var(--offset-value)
@@ -133,9 +153,6 @@ $numberHorizontalOffsetValue: -10%
         .cardDescription
             font-size: 1.25rem
 
-        .cardButton
-            font-size: 1rem
-
 @media screen and ( max-width: 1024px )
     .cardContainer
         --offset-value: 0
@@ -161,7 +178,10 @@ $numberHorizontalOffsetValue: -10%
                 font-size: 1rem
 
             .cardButton
-                font-size: 1rem
+                font-size: 1.5rem
+
+                &::after
+                    font-size: 0.5rem
 
 @media screen and ( max-width: 640px )
     .cardContainer
@@ -186,8 +206,10 @@ $numberHorizontalOffsetValue: -10%
                 font-size: 0.75rem
 
             .cardButton
-                font-size: 0.75rem
-                font-weight: normal
+                font-size: 1.25rem
+
+            .cardButtonContainer
+                gap: 1em
 
 @media screen and ( max-width: 480px )
     .cardContainer
@@ -207,7 +229,7 @@ $numberHorizontalOffsetValue: -10%
                 font-size: 0.75rem
 
             .cardButton
-                font-size: 0.75rem
+                font-size: 1.25rem
 
 @media screen and ( max-width: 320px )
     .cardContainer

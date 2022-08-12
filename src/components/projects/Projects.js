@@ -8,75 +8,68 @@ const Projects = () => {
 		{
 			title: "netPHlix",
 			description: "Netflix clone made using HTML, CSS, JS and PHP for NAR case",
-			image: 'dummy-old.png',
+			image: 'netphlix-preview.webp',
 			links: [
 				{
 					url: "https://github.com/SaPH17/netphlix",
-					icon: <FaGithub />
+					icon: <FaGithub />,
+					tooltip: "View Github"
 				},
 				{
 					url: "https://www.netphlix.stepadity.com/",
-					icon: <FaLink />
+					icon: <FaLink />,
+					tooltip: "View Website"
 				}
 			]
 		},
 		{
-			title: "Project Title",
-			description: "This is project description",
-			image: 'dummy-old.png',
+			title: "PHinterest",
+			description: "PHinterest clone, also made using HTML, CSS, JS and PHP for NAR case",
+			image: 'phinterest-preview.webp',
 			links: [
 				{
-					url: "https://github.com/",
-					icon: <FaGithub />
+					url: "https://github.com/SaPH17/phinterest",
+					icon: <FaGithub />,
+					tooltip: "View Github"
 				},
 				{
-					url: "https://www.youtube.com/",
-					icon: <FaLink />
+					url: "https://phinterest.stepadity.com/",
+					icon: <FaLink />,
+					tooltip: "View Website"
 				}
 			]
 		},
 		{
-			title: "Project Title",
-			description: "This is project description",
-			image: 'dummy-old.png',
+			title: "PHokemon unite",
+			description: "A clone of the official Pokemon Unite website, made using HTML and SCSS for NAR",
+			image: 'phokemon-preview.webp',
 			links: [
 				{
-					url: "https://github.com/",
-					icon: <FaGithub />
+					url: "https://github.com/SaPH17/phokemon-unite",
+					icon: <FaGithub />,
+					tooltip: "View Github"
 				},
 				{
-					url: "https://www.youtube.com/",
-					icon: <FaLink />
+					url: "https://phokemon-unite.stepadity.com/",
+					icon: <FaLink />,
+					tooltip: "View Website"
 				}
 			]
 		},
 		{
-			title: "Project Title",
-			description: "This is project description",
-			image: 'dummy-old.png',
+			title: "Google sliPHes",
+			description: "A simple clone of Google Slides. Made using HTML, CSS, and JQuery for NAR",
+			image: 'sliphes-preview.webp',
 			links: [
 				{
-					url: "https://github.com/",
-					icon: <FaGithub />
+					url: "https://github.com/SaPH17/google-sliphes",
+					icon: <FaGithub />,
+					tooltip: "View Github"
 				},
 				{
-					url: "https://www.youtube.com/",
-					icon: <FaLink />
-				}
-			]
-		},
-		{
-			title: "Project Title",
-			description: "This is project description",
-			image: 'dummy-old.png',
-			links: [
-				{
-					url: "https://github.com/",
-					icon: <FaGithub />
-				},
-				{
-					url: "https://www.youtube.com/",
-					icon: <FaLink />
+					url: "https://sliphes.stepadity.com/",
+					icon: <FaLink />,
+					tooltip: "View Website"
 				}
 			]
 		},

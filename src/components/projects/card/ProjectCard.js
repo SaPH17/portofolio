@@ -6,7 +6,7 @@ const ProjectCard = ({ project, idx }) => {
 
     return (
         <div className={`${styles.cardContainer} ${(idx + 1) % 2 === 0 ? styles.cardEven : styles.cardOdd}`}>
-            <div className={styles.cardImage} style={{backgroundImage: `url(${prefix + project.image})`}}>
+            <div className={styles.cardImage} style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.423)), url(${prefix + project.image})`}}>
                 <div className={styles.cardContent}>
                     <div className={styles.cardNumber}>
                         {"0" + (idx + 1)}
@@ -20,7 +20,7 @@ const ProjectCard = ({ project, idx }) => {
                     <div className={styles.cardButtonContainer}>
                         {project.links.map((val, idx) => {
                             return (
-                                <a href={val.url} className={styles.cardButton}>
+                                <a href={val.url} className={styles.cardButton} data-tooltip={val.tooltip}>
                                     {val.icon}
                                 </a>
                             )
