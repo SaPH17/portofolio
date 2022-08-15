@@ -1,15 +1,21 @@
-import React from 'react'
-import styles from './AchievementCard.module.sass'
+import React from "react"
+import styles from "./AchievementCard.module.sass"
 
 const AchievementCard = ({ achievement }) => {
-    const prefix = "/assets/"
+	const prefix = "/assets/"
 
-    return (
-        <div className={styles.imageContainer}>
-            <div className={styles.imageBackground} style={{backgroundImage: `url(${prefix + achievement.image})`}} alt=""/>
-            as
-        </div>
-    )
+	return (
+		<div className={styles.imageContainer}>
+			<img
+				className={styles.achievementImage}
+				src={`${prefix + achievement.image}`}
+				alt=''
+			/>
+			<div className={styles.achievementContent}>
+				<span>{achievement.description}</span>
+			</div>
+		</div>
+	)
 }
 
 export default AchievementCard

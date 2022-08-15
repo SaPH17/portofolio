@@ -8,7 +8,7 @@
     background-color: #f1f1f1
     scroll-margin: 90px
 
-.projectContainer
+.achievementContainer
     display: flex
     align-items: center
     justify-content: center
@@ -29,4 +29,20 @@
     display: grid
     width: 100%
     gap: 2em
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+
+@media screen and ( max-width: 640px )
+    .sectionContainer
+        padding: 0em 10% 5em
+
+    .achievementContainer
+        padding: 5em 0em
+        gap: 2em
+
+        .title
+            font-size: 1.5rem
+
+@media screen and ( max-width: 480px )
+    .cardContainer
+        gap: 3em
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr))
