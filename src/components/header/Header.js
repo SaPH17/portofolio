@@ -3,15 +3,9 @@ import styles from "./Header.module.sass"
 import Hamburger from "hamburger-react"
 import { useState } from "react"
 import MenuPopup from "./menu-popup/MenuPopup"
+import { menus } from "../../data"
 
 const Header = ({ contacts, isIntersecting }) => {
-	const menus = [
-		{ text: "About Me", url: "" },
-		{ text: "Projects", url: "/#projects" },
-		{ text: "Achievements", url: "/#achievements" },
-		{ text: "Contacts", url: "" },
-	]
-
 	const [menuOpened, setMenuOpened] = useState(false)
 
 	return (
@@ -50,6 +44,7 @@ const Header = ({ contacts, isIntersecting }) => {
 					isIntersecting={isIntersecting}
 					menus={menus}
 					isMenuOpened={menuOpened}
+					setMenuOpened={setMenuOpened}
 					contacts={contacts}></MenuPopup>
 			</div>
 		</>
