@@ -103,10 +103,10 @@ export const achievements = [
 		image: "achivements-starton.webp",
 		description: "Second Place in Starton: Hackathon",
 	},
-	{
-		image: "dicoding-android.webp",
-		description: "Dicoding Android Course",
-	},
+	// {
+	// 	image: "dicoding-android.webp",
+	// 	description: "Dicoding Android Course",
+	// },
 	// {
 	// 	image: "dicoding-ar.webp",
 	// 	description: "Dicoding AR Course",
@@ -118,6 +118,10 @@ export const achievements = [
 	{
 		image: "dicoding-aws2.webp",
 		description: "Dicoding AWS Architecture Course",
+	},
+	{
+		image: "AWS Certified Cloud Practitioner certificate.webp",
+		description: "AWS Certified Cloud Practitioner",
 	},
 	// {
 	// 	image: "dicoding-devops.webp",
