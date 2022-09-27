@@ -1,0 +1,92 @@
+{
+    "projects": [
+        {
+            "title": "netPHlix",
+            "description": "Netflix clone made using HTML, CSS, JS and PHP for NAR case",
+            "image": "netphlix-preview.webp",
+            "links": [
+                {
+                    "url": "https://github.com/SaPH17/netphlix",
+                    "icon": "github",
+                    "tooltip": "View Github"
+                },
+                {
+                    "url": "https://www.netphlix.stepadity.com/",
+                    "icon": "link",
+                    "tooltip": "View Website"
+                }
+            ]
+        },
+        {
+            "title": "PHinterest",
+            "description":
+                "PHinterest clone, also made using HTML, CSS, JS and PHP for NAR case",
+            "image": "phinterest-preview.webp",
+            "links": [
+                {
+                    "url": "https://github.com/SaPH17/phinterest",
+                    "icon": "github",
+                    "tooltip": "View Github"
+                },
+                {
+                    "url": "https://phinterest.stepadity.com/",
+                    "icon": "link",
+                    "tooltip": "View Website"
+                }
+            ]
+        },
+        {
+            "title": "PHokemon unite",
+            "description":
+                "A clone of the official Pokemon Unite website, made using HTML and SCSS for NAR",
+            "image": "phokemon-preview.webp",
+            "links": [
+                {
+                    "url": "https://github.com/SaPH17/phokemon-unite",
+                    "icon": "github",
+                    "tooltip": "View Github"
+                },
+                {
+                    "url": "https://phokemon-unite.stepadity.com/",
+                    "icon": "link",
+                    "tooltip": "View Website"
+                }
+            ]
+        },
+        {
+            "title": "Google sliPHes",
+            "description":
+                "A simple clone of Google Slides. Made using HTML, CSS, and JQuery for NAR",
+            "image": "sliphes-preview.webp",
+            "links": [
+                {
+                    "url": "https://github.com/SaPH17/google-sliphes",
+                    "icon": "github",
+                    "tooltip": "View Github"
+                },
+                {
+                    "url": "https://sliphes.stepadity.com/",
+                    "icon": "link",
+                    "tooltip": "View Website"
+                }
+            ]
+        },
+        {
+            "title": "Personal Website",
+            "description": "My portofolio website, made using React",
+            "image": "portofolio-preview.webp",
+            "links": [
+                {
+                    "url": "https://github.com/SaPH17/portofolio",
+                    "icon": "github",
+                    "tooltip": "View Github"
+                },
+                {
+                    "url": "https://stepadity.com/",
+                    "icon": "link",
+                    "tooltip": "View Website"
+                }
+            ]
+        }
+    ]
+}

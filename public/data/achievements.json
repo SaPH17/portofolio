@@ -1,0 +1,20 @@
+{
+    "achievements": [
+        {
+            "image": "achivements-starton.webp",
+            "description": "Second Place in Starton: Hackathon"
+        },
+        {
+            "image": "dicoding-aws1.webp",
+            "description": "Dicoding AWS Basic Course"
+        },
+        {
+            "image": "dicoding-aws2.webp",
+            "description": "Dicoding AWS Architecture Course"
+        },
+        {
+            "image": "AWS Certified Cloud Practitioner certificate.webp",
+            "description": "AWS Certified Cloud Practitioner"
+        }
+    ]
+}
