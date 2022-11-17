@@ -3,7 +3,7 @@ import styles from "./Banner.module.sass"
 
 const Banner = React.forwardRef(({ contacts }, ref) => {
 	return (
-		<div className={styles.bannerContainer} ref={ref}>
+		<div className={styles.bannerContainer} ref={ref} id="about-me">
 			<div className={styles.subtitle}>Hi, my name is</div>
 			<div className={`${styles.title} ${styles.typewriterAnimation}`}>
 				Stephanus Aditya

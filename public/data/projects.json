@@ -72,21 +72,30 @@
             ]
         },
         {
-            "title": "Personal Website",
-            "description": "My portofolio website, made using React",
-            "image": "portofolio-preview.webp",
+            "title": "Cholarr",
+            "description": "A website that was made to help high school student decide their career path",
+            "image": "cholarr-preview.webp",
             "links": [
                 {
-                    "url": "https://github.com/SaPH17/portofolio",
+                    "url": "https://github.com/luisfrentzen/starton-hackathon",
                     "icon": "github",
                     "tooltip": "View Github"
-                },
-                {
-                    "url": "https://stepadity.com/",
-                    "icon": "link",
-                    "tooltip": "View Website"
                 }
             ]
         }
+        ,
+        {
+            "title": "youRJube",
+            "description": "A youtube clone, made using Angular, GoLang and PostGres",
+            "image": "yourjube-preview.webp",
+            "links": [
+                {
+                    "url": "https://github.com/SaPH17/youRJube",
+                    "icon": "github",
+                    "tooltip": "View Github"
+                }
+            ]
+        }
+        
     ]
 }
