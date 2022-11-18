@@ -15,7 +15,7 @@ function App() {
 		{ icon: <FaGithub />, url: "https://github.com/SaPH17" },
 		{
 			icon: <FaLinkedin />,
-			url: "https://www.linkedin.com/in/stephanus-aditya-pratama-harjono-6608a01ab/",
+			url: "https://www.linkedin.com/in/stephanus-aditya/",
 		},
 		{ icon: <FaEnvelope />, url: "mailto:stephanusaditya17@gmail.com" },
 	]
